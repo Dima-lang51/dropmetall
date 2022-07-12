@@ -419,28 +419,45 @@ header
     padding-top: 110px
     padding-bottom: 106px
     display: flex
+    justify-content: center
     align-items: center
+    @media (max-width: 1165px)
+      display: block
+    @media (max-width: 860px)
+      padding: 110px 10px 110px 10px
     .request-block
-      margin-left: 248px
       position: relative
       top: -120px
       left: 0px
+      @media (max-width: 1165px)
+        top: 0
       .request-title
         margin-bottom: 20px
         max-width: 237px
         line-height: 50px
         text-align: left
+        @media (max-width: 1165px)
+          margin: auto
+          padding-bottom: 50px
+          text-align: center
       .request-descr
         max-width: 220px
         span
           font-weight: 700
+        @media (max-width: 1165px)
+          display: none
     .request-form
-      margin-left: 154px
+      margin-left: 8.02vw
+      @media (max-width: 1165px)
+       margin-left: 0
       form
         padding: 55px 60px
         background: rgb(81 116 166 / 10%)
         box-shadow: 0 0 15px rgb(52 59 77)
         backdrop-filter: blur(8px)
+        @media (max-width: 1165px)
+          margin: auto
+          width: fit-content
         input, textarea
           display: block
           width: 350px
@@ -448,6 +465,12 @@ header
           padding-left: 30px
           height: 80px
           border: none
+          @media (max-width: 600px)
+            width: 250px
+            margin: auto
+            margin-bottom: 5px
+          @media (max-width: 600px)
+            width: 200px
         textarea::-webkit-input-placeholder
           position: absolute
           top: 50%
@@ -455,6 +478,8 @@ header
         button
           text-transform: uppercase
           background: url(/img/request-btn-bg.png)
+          background-size: cover
+          background-repeat: no-repeat
           box-shadow: 0px 20px 40px 8px rgba(255, 0, 0, .2)
           letter-spacing: 3px
           font-family: inherit
@@ -477,6 +502,8 @@ header
             max-height: 1px
             overflow: hidden
             clip: rect(0 0 0 0)
+            @media (max-width: 600px)
+              margin: 0px 
           span
             position: relative
             left: -3px
